@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     var speedTracker: SpeedTracker!
 
     override func viewDidLoad() {
+        precondition(speedLabel != nil)
+        precondition(maxSpeedLabel != nil)
+        precondition(speedTracker != nil)
+
         super.viewDidLoad()
 
         formatAndUpdateLabels(currentSpeed: speedTracker.currentSpeed, maxSpeed: speedTracker.maxSpeed)
