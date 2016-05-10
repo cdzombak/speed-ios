@@ -10,9 +10,9 @@ import Foundation
 
 func formatForCurrentLocale(speedInMetersPerSecond speed: Double) -> String {
     guard let metricNumber = NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? NSNumber else { fatalError() }
-    let isMetric = metricNumber.boolValue
+    let useMetric = metricNumber.boolValue
 
-    if isMetric {
+    if useMetric {
         let convertedSpeed = round(speed * 3.6)
         let speedString = String(format: "%.0f", convertedSpeed)
         return "\(speedString) km/h"

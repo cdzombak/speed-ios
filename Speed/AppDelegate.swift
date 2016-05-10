@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let speedViewController = window?.rootViewController as? ViewController else { fatalError() }
         speedViewController.speedTracker = speedTracker
 
-        dispatch_async(dispatch_get_main_queue()) { [weak self] in
+        whenUIIsAvailable() { [weak self] in
             guard let `self` = self else { return }
             self.startTrackingOrShowLocationAlert(self.speedTracker)
         }
@@ -38,6 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(application: UIApplication) {
         speedTracker.stopTracking()
+    }
+
+    private func whenUIIsAvailable(block: (Void) -> Void) {
+        dispatch_async(dispatch_get_main_queue(), block)
     }
 
     private func startTrackingOrShowLocationAlert(tracker: SpeedTracker) {
