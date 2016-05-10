@@ -62,10 +62,10 @@
 			children = (
 				9376C52D1CE0F52800D373F5 /* AppDelegate.swift */,
 				9376C52F1CE0F52900D373F5 /* ViewController.swift */,
-				9309DC221CE148360052853E /* Settings.bundle */,
 				9376C53F1CE0F6C400D373F5 /* SpeedTracker.swift */,
 				9309DC201CE124BE0052853E /* SpeedFormat.swift */,
 				9376C5311CE0F52900D373F5 /* Main.storyboard */,
+				9309DC221CE148360052853E /* Settings.bundle */,
 				9376C5341CE0F52900D373F5 /* Assets.xcassets */,
 				9376C5361CE0F52900D373F5 /* LaunchScreen.storyboard */,
 				9376C5391CE0F52900D373F5 /* Info.plist */,
